@@ -1,0 +1,210 @@
+1. Quais desta declarações são verdade? (Escolha todas que se aplicam)
+	A. "X extends Y" é correto se e somente se X é uma classe e Y é uma interface
+	B. "X extends Y" é correto se e somente se X é uma interface e Y é uma classe
+	C. "X extends Y" é correto se X e Y são ambas classes or ambas interfaces
+	D. "X extends Y" é correto para todas as combinações de X e Y sendo classes e/ou interfaces
+	
+Resposta:
+
+2. Dado:
+	
+	class Rocket {
+		private void blastOff() { System.out.print("bang ");}
+	}
+	public class Shuttle extends Rocket {
+		public static void main (String... args){
+			new Shuttle().go();
+		}
+		void go(){
+			blastOff();
+			// Rocket.blastOff(); // line A
+		}
+		private void blastOff() {System.out.print("sh-bang ");}
+	}
+	
+	Quais são verdade? (Escolha todas que se aplicam)
+	
+	A. Processado o código, a saída é bang
+	B. Processado o código, a saída é sh-bang
+	C. Processado o código, compilação falha
+	D. Se a linha A estiver descomentada, a saída é bang bang
+	E. Se a linha A estiver descomentada, a saída é sh-bang bang
+	F. Se a linha A estiver descomentada, compilação falha
+	
+Resposta:
+
+3. Dado que a sintaxe do loop for está correta e dado:
+	
+	import static java.lang.System.*;
+	class _{
+		static public void main(String[] __A_V_){
+			String $ = "";
+			for (int x=0; ++x < __A_V_.lenght; ){ // for loop
+				$ += __A_V_[x];
+				out.println($);
+			}
+		}
+	}
+	
+	E a linha de comando: java _ - A .
+	
+	Qual é o resultado?
+	
+	A. -A
+	B. A.
+	C. -A.
+	D. _A.
+	E. _-A.
+	F. Compilação falha
+	G. Uma exceção runtime é lançada
+	
+Resposta:
+	
+4. Dado:
+
+	1. enum Animals {
+	2.  	DOG("woof"), CAT("meow"), FISH("burble");
+	3.	 	String sound;
+	4.	 	Animals(String s) { sound = s;)}
+	5. }
+	6. class testEnum {
+	7.		static Animals a;
+	8.		public static void main(String... args){
+	9.			System.out.println(a.DOG.sound + " " + a.FISH.sound);
+	10.		}
+	11.}
+	
+	Qual é o resultado?
+	
+	A. woof burble;
+	B. Erros múltiplos de compilação
+	C. Compilação falha devido erro na linha 2
+	D. Compilação falha devido erro na linha 3
+	E. Compilação falha devido erro na linha 4
+	F. Compilação falha devido erro na linha 9
+	
+Resposta:
+
+5. Dados dois arquivos:
+
+	1.	package pkgA;
+	2.	public class Foo {
+	3.		int a = 5;
+	4.		protected int b = 6;
+	5.		public int c = 7;
+	6.	}
+		
+	3.	package pkgB;
+	4.	import pkgA.*;
+	5.	public class Baz {
+	6.		public static void main(String[] args){
+	7.			Foo f = new Foo();
+	8.			System.out.print(" " + f.a);
+	9.			System.out.print(" " + f.b);
+	10.			System.out.println(" " + f.c);
+	11.		}
+	12.	}
+	
+	Qual é o resultado? (Escolha todas que se aplicam)
+	
+	A. 5 6 7
+	B. 5 seguido de uma exceção
+	C. Compilação falha devido a erro na linha 7
+	D. Compilação falha devido a erro na linha 8
+	E. Compilação falha devido a erro na linha 9
+	F. Compilação falha devido a erro na linha 10
+	
+Resposta:
+	
+6. Dado:
+
+	1.	public class Electronic implements Device 
+			{ public void doIt(); }
+	2.		
+	3.	abstract class Phone1 extends Electronic { }
+	4.	
+	5.	abstract class Phone2 extends Electronic 
+			{ public void doIt(int x){ } }
+	6.		
+	7.	class Phone3 extends Electronic implements Device 
+			{ public void doStuff(){ } }
+	8.	
+	9.	interface Device { public void doIt(); }
+	
+	Qual é o resultado? (Escolha todas que se aplicam)
+	
+	A. Compila com sucesso
+	B. Compilação falha devido erro na linha 1
+	C. Compilação falha devido erro na linha 3
+	D. Compilação falha devido erro na linha 5
+	E. Compilação falha devido erro na linha 7
+	F. Compilação falha devido erro na linha 9
+
+Resposta:
+
+7. Dado:
+
+	4.	class Announce {
+	5.		public static void main(String[] args){
+	6.			for (int __x = 0; __x <3; __x++);
+	7.			int #lb = 7;
+	8.			long [] x[5];
+	9.			Boolean []ba[];
+	10.		}
+	11.	}
+	
+	Qual é o resultado? (Escolha todas que se aplicam)
+	
+	A. Compila com sucesso
+	B. Compilação falha devido erro na linha 6
+	C. Compilação falha devido erro na linha 7
+	D. Compilação falha devido erro na linha 8
+	E. Compilação falha devido erro na linha 9
+	
+Resposta:
+
+8. Dado:
+
+	3.	public class TestDays {
+	4.		public enum Days {MON, TUE, WED};
+	5.		public static void main(String[] args){
+	6.			for (Days d : Days.values())
+	7.			;
+	8.			Days[] d2 = Days.values();
+	9.			System.out.println(d2[2]);
+	10.		}
+	11.	}
+	
+	Qual é o resultado? (Escolha todas que se aplicam)
+	
+	A. TUE
+	B. WED
+	C. Saída é imprevisível
+	D. Compilação falha devido a erro na linha 4
+	E. Compilação falha devido a erro na linha 6
+	F. Compilação falha devido a erro na linha 8
+	G. Compilação falha devido a erro na linha 9
+	
+Resposta:
+
+9. Dado:
+
+	4.	public class Frodo extends Hobbit
+	5.		public static void main(String[] args){
+	6.			int myGold = 7;
+	7.			System.out.println(countGold(myGold, 6));
+	8.		}
+	9.	}
+	10.	class Hobbit {
+	11.		int countGold(int x, int y) { return  x + y; }
+	12.	}
+	
+	Qual é o resultado:
+	
+	A. 13
+	B. Compilação falha devido múltiplos erros
+	C. Compilação falha devido um erro na linha 6
+	D. Compilação falha devido um erro na linha 7
+	E. Compilação falha devido um erro na linha 11
+	
+Resposta: 
