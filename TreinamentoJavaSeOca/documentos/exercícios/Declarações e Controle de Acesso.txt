@@ -208,3 +208,50 @@ Resposta:
 	E. Compilação falha devido um erro na linha 11
 	
 Resposta: 
+
+10. Dado:
+
+	interface gadget {
+		void doStuff();
+	}
+	abstract class Electronic {
+		void getPower() { System.out.print("plug in "); }
+	}
+	public class Tablet extends Electronic implements Gadget {
+		void doStuff() { System.out.print("show book "); }
+		public static void main(String[] args) {
+			new Tablet().getPower();
+			new Tablet().doStuff();
+		}
+	}
+	
+	Quais são verdade? (Escolha todas que se aplicam)
+	
+	A. A class Tablet não irá compilar
+	B. A interface Gadget não irá compilar
+	C. A saída será plug in show book
+	D. A class abstract Electronic não irá compilar
+	E. A class Tablet não pode ambos estender e implementar
+	
+Resposta:
+
+11. Dado que  a class Integer está no pacote java.lang e dado:
+
+	1.	// insert code here
+	2.	class StatTest {
+	3.		public static void main(String... args){
+	4.			System.out.println(Integer.MAX_VALUE);
+	5.		}
+	6.	}
+	
+	Quais - inserido na linha 1 - compila? (Escolha todas que se aplicam)
+	
+	A. import static java.lang;
+	B. import static java.lang.Integer);
+	C. import static java.lang.Integer.*;
+	D. static import java.lang.Integer.*;
+	E. import static java.lang.Integer.MAX_VALUE;
+	D. Nenhum dos statements são sintaxes válidas de import
+	
+Resposta:
+	
