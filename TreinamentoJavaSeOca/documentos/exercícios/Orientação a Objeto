@@ -286,3 +286,31 @@ Resposta:
 Resposta: 
 
 12. Dado:
+
+	class Mammal {
+		String nome = "furry ";
+		String makeNoise() { return "generic noise"; }
+	}
+	class Zebra extends Mammal {
+		String name = "stripes";
+		String makeNoise() { return "bray"; }
+	}
+	public class ZooKeeper {
+		public static void main(String[] args) { new ZooKeeper().go(); }
+		void go() {
+			Mammal m = new Zebra();
+			System.out.println(m.name + m.makeNoise());
+		}
+	}
+	
+	Qual é o resultado?
+	
+	A. furry bray
+	B. stripes bray
+	C. furry generic noise
+	D. stripes generic noise
+	E. Compilação falha
+	F. Uma exceção de tempo de execução é lançada
+	
+Resposta:
+
