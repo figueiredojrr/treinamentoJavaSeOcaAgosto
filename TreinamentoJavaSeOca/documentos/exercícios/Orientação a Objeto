@@ -208,15 +208,15 @@ Resposta:
 
 9. Dado:
 	
-	public class Tenor extends Singer {
-		public static String sing() { return "fa"; }
-		public static void main(String[] args) {
-			Tenor t = new Tenor();
-			singer s = new Tenor();
-			System.out.println(t.sing() + " " + s.sing());
-		}
-	}
-	class Singer { public static String sing() { return "la"; } }
+	3.	public class Tenor extends Singer {
+	4.		public static String sing() { return "fa"; }
+	5.		public static void main(String[] args) {
+	6.			Tenor t = new Tenor();
+	7.			Singer s = new Tenor();
+	8.			System.out.println(t.sing() + " " + s.sing());
+	9.		}
+	10.	}
+	11.	class Singer { public static String sing() { return "la"; } }
 	
 	Qual é o resultado?
 	
@@ -229,3 +229,60 @@ Resposta:
 Resposta:
 
 10. Dado:
+
+	3.	class Alpha {
+	4.		static String s = " ";
+	5.		protected Alpha() { s += "alpha "; }
+	6.	}
+	7.	class SubAlpha extends Alpha {
+	8.		private SubAlpha() { s += "sub "; }
+	9.	}
+	10.	public class SubSubAlpha extends Alpha {
+	11.		private SubSubAlpha() { s+= "subsub "; }
+	12.		public static void main(String[] args){
+	13.			new SubSubAlpha();
+	14.			System.out.println(s);
+	15.		}
+	16.	}
+	
+	Qual é o resultado?
+	
+	A. subsub
+	B. sub subsub
+	C. alpha subsub
+	D. alpha sub subsub
+	E. Compilação falha
+	F. Uma exceção em tempo de execução é lançada
+	
+Resposta:
+
+11. Dado:
+
+	3.	class Building {
+	4.		Building() { system.out.print("b "); }
+	5.		Building(String name) {
+	6.			this(); System.out.print("bn " + name);
+	7.		}
+	8.	}
+	9.	public class House extends Building {
+	10.		House() { System.out.print("h "); }
+	11.		House(String name) {
+	12.			this(); System.out.print("hn " + name);
+	13.		}
+	14.		public static void main(String[] args) { new House("x "); }
+	15.	}
+
+	Qual é o resultado?
+	
+	A. h hn x
+	B. hn x h
+	C. b h hn x
+	D. b hn x h
+	E. bn x h hn x
+	F. b bn x h hn x
+	G. bn x b h hn x
+	H. Compilação falha
+	
+Resposta: 
+
+12. Dado:
