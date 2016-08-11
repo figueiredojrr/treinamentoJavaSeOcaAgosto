@@ -1,0 +1,231 @@
+1. Dado:
+	
+	public abstract interface Frobnicate { public void twiddle(String s); }
+	
+	Qual é a classe correta? (Escolha todas que se aplicam)
+	
+	A. public abstract class Frob implements Frobnicate {
+	 		public abstract void twiddle(String s) { }
+	   }
+	B. public abstract class Frob implements Frobnicate { }
+	C. public class Frob extends Frobnicate {
+	   		public void twiddle(Integer i) { }
+	   }
+	D. public class Frob implements Frobnicate {
+	   		public void twiddle(Integer i) { }
+	   }
+	E. public class Frob implements Frobnicate {
+	   		public void twiddle(String i) { }
+	   		public void twiddle(Integer s) { }
+	   }
+	   
+Resposta:
+
+2. Dado:
+
+	class Top {
+		public Top(String s) { System.out.print("B"); }
+	}	
+	
+	public class Bottom2 extends Top{
+		public Bottom2(String s) { System.out.print("D"); }
+		public static void main(String[] args){
+			new Bottom("C");
+			System.out.println(" ");
+		}
+	}
+	
+	Qual é o resultado?
+	
+	A. BD
+	B. DB
+	C. BDC
+	D. DBC
+	E. Compilação falha
+	
+Resposta: 
+
+3. Dado:
+
+	class Clidder {
+		private final void flipper() { System.out.println("Clidder"); }
+	}
+	public class Clidlet extends Clidder {
+		public final void flipper() { System.out.println("clidlet"); }
+		public static void main(String[] args){
+			new Clidlet().flipper();
+		}
+	}
+	
+	Qual é o resultado?
+	
+	A. Clidlet
+	B. Clidder
+	C. Clidder
+	   Clidlet
+	D. Clidlet
+	   Clidder
+	E. Compilação falha
+	
+Resposta:
+
+4. Dado:
+
+	class Bird{
+		{System.out.println("b1 "); }
+		public Bird() { System.out.print("b2 "); }
+	}	
+	class Raptor extends Bird {
+		static { System.out.print("r1 "); }
+		public Raptor() { System.out.print("r2 "); }
+		{ System.out.print("r3 "); }
+		static { System.out.print("r4 "); }
+	}
+	class Hawk extends Raptor {
+		public static void main(String[] args){
+			System.out.print("pre ");
+			new Hawk();
+			System.out.println("hawk ");
+		}
+	}
+	
+	Qual é o resultado?
+	
+	A. pre b1 b2 r3 r2 hawk
+	B. pre b2 b1 r2 r3 hawk
+	C. pre b2 b1 r2 r3 hawk r1 r4
+	D. r1 r4 pre b1 b2 r3 r2 hawk
+	E. r1 r4 pre b2 b1 r2 r3 hawk
+	F. pre r1 r4 b1 b2 r3 r2 hawk
+	G. pre r1 r4 b2 b1 r2 r3 hawk
+	H. A ordem da saída não pode ser prevista
+	I. Compilação falha
+
+Resposta:
+
+5. Dado o seguinte:
+
+	1.	class X { void do1() { } }
+	2.	class Y extends X { void do2() { } }
+	3.	
+	4.	class Chrome {
+	5.		public static void main(String[] args){
+	6.			X x1 = new X();
+	7.			X x2 = new Y();
+	8.			Y y1 = new Y();
+	9.			// insert code here
+	10.	}	}
+	
+	Quais dos seguintes, ao ser inserido na linha 9, compilará? (Selecione todas que se aplicam)
+	
+	A. x2.do2();
+	B. (Y)x2.do2();
+	C. ((Y)x2).do2();
+	D. Nenhuma das soluções acima compilarão
+	
+Resposta:
+
+6. Dado:
+
+	 public class Locomotive {
+	 	Locomotive() { main("hi"); }
+	 
+	 	public static void main(String[] args){
+	 		System.out.print("2 ");
+	 	}
+	 	public static void main(String args){
+	 		System.out.print("3 " + args);
+	 	}
+	 }
+	 
+	 Qual é o resultado? (Selecione todas que se aplicam)
+	 
+	 A. 2  será incluído na saída
+	 B. 3  será incluída na saída
+	 C. hi será incluída na saída
+	 D. Compilação falha
+	 E. Uma exceção em tempo de execução será lançada
+
+Resposta:
+
+7. Dado:
+
+	3.	class Dog {
+	4.		public void bark() { System.out.print("woof "); }
+	5.	}
+	6.	class Hound extends Dog{
+	7.		public void sniff() { System.out.print("sniff "); }
+	8.		public void bark() { System.out.print("how1 "); }
+	9.	}
+	10.	public class DogShow {
+	11.		public static void main(String[] args){ new DogShow().go();}
+	12.		void go() {
+	13.			new Hound().bark();
+	14.			((Dog) new Hound()).bark();
+	15.			((dog) new Hound()).sniff();
+	16.		}
+	17.	}
+	
+	Qual é o resultado? (Selecione todas que se aplicam)
+	
+	
+	A. how1 how1 sniff
+	B. how1 woof sniff
+	C. how1 how1 seguido de uma exceção
+	D. how1 woof seguido de uma exceção
+	E. Compilação falha na linha 14
+	F. Compilação falha na linha 15 
+	
+Resposta:
+
+8. Dado:
+
+	3.	public class Redwood extends Tree {
+	4.		public static void main(String[] args){
+	5.			new Redwood().go();
+	6.		}
+	7.		void go(){
+	8.			go2(new Tree(), new Redwood());
+	9.			go2( (Redwood) new Tree(), new Redwood());
+	10.		}
+	11.		void go2(Tree t1, Redwood r1){
+	12.			Redwood r2 = (Redwood) t1;
+	13.			Tree t2 = (Tree) r1;
+	14.		}
+	15.	}
+	16.	class Tree { }
+	
+	Qual é o resultado? (Selecione todas que se aplicam)
+	
+	A. Uma exceção é lançada em tempo de execução
+	B. O código compila e roda sem saída
+	C. Compilação falha na linha 8
+	D. Compilação falha na linha 9
+	E. Compilação falha na linha 12
+	F. Compilação falha na linha 13
+
+Resposta:
+
+9. Dado:
+	
+	public class Tenor extends Singer {
+		public static String sing() { return "fa"; }
+		public static void main(String[] args) {
+			Tenor t = new Tenor();
+			singer s = new Tenor();
+			System.out.println(t.sing() + " " + s.sing());
+		}
+	}
+	class Singer { public static String sing() { return "la"; } }
+	
+	Qual é o resultado?
+	
+	A. fa fa
+	B. fa la
+	C. la la
+	D. Compilação falha
+	E. Uma exceção em tempo de execução é lançada
+	
+Resposta:
+
+10. Dado:
