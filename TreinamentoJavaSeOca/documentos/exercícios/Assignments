@@ -183,4 +183,173 @@ Resposta:
 
 8. Dado:
 
+	public class Ouch {
+		static int ouch = 7;
+		public static void main(String[] args) {
+			new Ouch().go(ouch);
+			System.out.print(" " + ouch);
+		}
+		void go(int ouch) {
+			ouch++;
+			for(int ouch 3; ouch < 6, ouch++)
+				;
+			System.out.print(" " + ouch);
+		}
+	}
 	
+	Qual é o resultado?
+	
+	A. 5 7 
+	B. 5 8
+	C. 8 7 
+	D. 8 8
+	E. Compilação falha
+	F. Uma exceção em tempo de dexeução é lançada
+	
+Resposta:
+
+9. Dado: 
+
+	public class Happy {
+		int id;
+		Happy(int i) { id = i; }
+		public static void main(String[] args){
+			Happy h1 = new Happy(1);
+			Happy h2 = h1.go(h1);
+			System.out.println(h2.id);
+		}
+		Happy go(Happy h) {
+			Happy h3 = h;
+			h3.id = 2;
+			h1.id = 3;
+			return h1;
+		}
+	}
+	
+	Qual é o resultado?
+	
+	A. 1
+	B. 2
+	C. 3
+	D. Compilação falha
+	E. Uma exceção em tempo de execução é lançada
+	
+Resposta:
+
+10. Dado:
+
+	public class Network {
+		Network(int x, Network n) {
+			id = x;
+			p = this;
+			if (n!= null) p = n;
+		}
+		int id;
+		Network p;
+		public static void main(String[] args){
+			Network n1 = new Network(2, n1);
+			Network n3 = new Network(3, n2);
+			System.out.println(n3.p.p.id);
+		}
+	}
+	
+	Qual é o resultado?
+	
+	A. 1
+	B. 2
+	C. 3
+	D. null
+	E. Compilação falha
+	
+Resposta: 
+
+11. Dado:
+
+	3.	class Beta { }
+	4.	class Alpha {
+	5.		static Beta b1;
+	6.		Beta b2;
+	7.	}
+	8.	public class Tester {
+	9.		public static void main(String[] args) {
+	10.			Beta b1 = new Beta(); Beta b2 = new Beta();
+	11.			Alpha a1 = new Alpha(); Alpha a2 = new Alpha();
+	12.			a1.b1 = b1;
+	13.			a1.b2 = b1;
+	14.			a2.b2 = b2;
+	15.			a1 = null; b1 = null; b2 = null;
+	16.			// do stuff
+	17.		}
+	18.	}
+	
+	Quando a linha 16 é atingida, quantos objetos estarão elegíveis para o coletor de lixo? 
+	
+	A. 0
+	B. 1
+	C. 2
+	D. 3
+	E. 4
+	F. 5
+	
+Resposta:
+
+12. Dado:
+
+	public class Telescope {
+		static int magnify = 2;
+		public static void main(String[] args) {
+			go();
+		}
+		static void go() {
+			int magnify = 3;
+			zoomIn();
+		}
+		static void zoomIn() {
+			magnify *= 5;
+			zoomMore(magnify);
+			system.out.println(magnify);
+		}
+		static void zoomMore(int magnify) {
+			magnify *= 7;
+		}
+	}
+	
+	Qual é o resultado?
+	
+	A. 2
+	B. 10
+	C. 15
+	D. 30
+	E. 70
+	F. 105
+	G. Compilação falha
+	
+Resposta:
+
+13. Dado:
+
+	public class Dark {
+		int x = 3;
+		public static void main(String[] args) {
+			new Dark().go1();
+		}
+		void go1() {
+			int x;
+			go2(++x);
+		}
+		void go2(int y) {
+			int x = ++y;
+			system.out.println(x);
+		}
+	}
+	
+	Qual é o resultado?
+	
+	A. 2
+	B. 3
+	C. 4
+	D. 5
+	E. Compilação falha
+	F. Uma exceção em tempo de execução é lançada
+	
+Resposta:
