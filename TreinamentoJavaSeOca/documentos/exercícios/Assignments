@@ -1,0 +1,186 @@
+1. Dado:
+	
+	class CardBoard {
+		Short story = 200;
+		CardBoard go(CardBoard cb) {
+			cb = null;
+			return cb;
+		}
+		public static void main(String[] args){
+			CardBoard c1 = new CardBoard();
+			CardBoard c2 = new CardBoard();
+			CardBoard c3 = c1.go();
+			c1 = null;
+			// do stuff
+		}
+	}
+	
+	Quando "// do stuff" é atingido, quantos objetos estão elegíveis para o coletor de lixo?
+	
+	A. 0
+	B. 1
+	C. 2
+	D. Compilação falha
+	E. Não é possível conhecer
+	F. Uma exceção em tempo de execução é lançada
+	
+Resposta:
+
+2. Dado:
+
+	public class Fishing {
+		byte b1 = 4;
+		int i1 = 123456;
+		long L1 = (long) i1;     // Linha A
+		short s2 = (short) i1;   // Linha B
+		byte b2 = (byte) i1;	 // Linha C
+		int i2 = (int) 123.456;	 // Linha D
+		byte b3  b1 + 7;		 // Linha E
+	}	
+	
+	Quais linhas não compilarão? (Escolha todas as opções que se aplicam)
+	
+	A. Linha A
+	B. Linha B
+	C. Linha C
+	D. Linha D
+	E. Linha E
+
+Resposta:
+
+3. Dado:
+
+	public class Literally {
+		public static void main(String[] args) {
+			int i1 = 1_000;			// linha A
+			int i2 = 10_00;			// Linha B
+			int i3 = _10_000;		// Linha C
+			int i4 = 0b101010;		// Linha D
+			int i5 = oB10_1010;		// Linha E
+			int i6 = 0x2_a;			// Linha F
+		}
+		
+	Quais linhas não compilarão? (Escolha todas as opções que se aplicam)
+	
+	A. Linha A
+	B. Linha B
+	C. Linha C
+	D. Linha D
+	E. Linha E
+	F. Linha F
+	
+Resposta:
+
+4. Dado:
+
+	class Mixer {
+		Mixer() { }
+		Mixer m1;
+		public static void main(String[] args) {
+			Mixer m2 = new Mixer();
+			Mixer m3 = new Mixer(m2); m3.go();
+			Mixer m4 = m3.m1; m4.go();
+			Mixer m5 = m2.m1; m5.go();
+		}
+		void go() { System.out.print("hi "); }
+	}
+	
+	Qual é o resultado?
+	
+	A. hi
+	B. hi hi
+	C. hi hi hi
+	D. Compilação falha
+	E. hi, seguido de uma exceção
+	F. hi hi, seguido de uma exceção
+	
+Resposta:
+
+5. Dado:
+	
+	class Fizz {
+		int x = 5;
+		public static void main(String[] args) {
+			final Fizz f1 = new Fizz();
+			Fizz f2 = new Fizz();
+			fizz f3 = FizzSwitch(f1,f2);
+			System.out.println((f1 == f3) + " " + (f1.x == f3.x));
+		}
+		static class FizzSwitch (Fizz x, Fizz y){
+			final Fizz z = x;
+			z.x = 6;
+			return z.
+		}
+	}
+	
+	Qual é o resultado?
+	
+	A. true true
+	B. false true
+	C. true false
+	D. false false
+	E. Compilação falha
+	F. Uma exceção em tempo de execução é lançada
+	
+Resposta:
+
+6. Dado:
+
+	 public class Mirror {
+	 	int size = 7;
+	 	public static void main(String[] args){
+	 		Mirror m1 = new Mirror();
+	 		Mirror m2 = m1;
+	 		int i1 = 10;
+	 		int i2 = 11;
+	 		go(m2, i2);
+	 		System.out.println(m1.size + " " + i1);
+	 	}
+	 	static void go(Mirror m, int i){
+	 		m.size = 8;
+	 		i = 12;
+	 	}
+	 }
+	 
+	 Qual é o resultado?
+	 
+	 A. 7 10
+	 B. 8 10
+	 C. 7 12
+	 D. 8 12
+	 E. Compilação falha
+	 F. Uma exceção em tempo de execução é lançada
+	 
+Resposta:
+
+7. Dado:
+
+	 public class Wind {
+	 	int id;
+	 	Wind(int i) { id [ 1; }
+	 	public static void main(String[] args) {
+	 		new Wind(3).go();
+	 		// commented line
+	 	}
+	 	void go(){
+	 		Wind w1 = new Wind(1);
+	 		Wind w2 = new Wind(2);
+	 		System.out.println(w1.id + " " + w2.id);
+	 	}
+	 }
+	 
+	 Quando a execução atinge "// commented line", quais são verdade? (Escolha todas as opções que se aplicam)
+	 
+	 A. A saída contém 1
+	 B. A saída contém 2
+	 C. A saída contém 3
+	 D. Zero objetos são elegíveis para coletor de lixo
+	 E. Um objeto é elegível para coletor de lixo
+	 F. dois objetos são elegíveis para coletor de lixo
+	 G. Três objetos são elegíveis para coletor de lixo
+	
+Resposta:
+
+8. Dado:
+
+	
