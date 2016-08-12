@@ -1,0 +1,203 @@
+1. Dado 
+
+	class Hexy {
+		public static void main(String[] args) {
+			int i = 42;
+			String s = (i < 40) ? "life" : (i > 50) ? "universe" : "everything";
+			System.out.println(s);
+		}
+	}
+	
+	Qual é o resultado?
+	
+	A. null
+	B. life
+	C. universe
+	D. everything
+	E. Compilação falha
+	F. Uma exceção em tempo de execução é lançada
+	
+Resposta:
+
+2. Dado:
+
+	public class Dog {
+		String name;
+		Dog(String s) { name = s; }
+		public static void main(String[] args) {
+			Dog d1 = new Dog("Boi");
+			Dog d2 = new Dog("Tyri");
+			System.out.print((d1 == d2) + " ");
+			Dog d3 = new Dog("Boi");
+			d2 = d1;
+			System.out.print((d1 == d2) + " ");
+			System.out.print((d1 == d3) + " ");
+		}
+	}
+	
+	Qual é o resultado?
+	
+	A. true true true
+	B. true true false
+	C. false true false
+	D. false true true
+	E. false false false
+	F. Uma exceção em tempo de execução é lançada
+	
+Resposta:
+
+3. Dado
+
+	class Fork {
+		public static void main(String[] args) {
+			if (args.lenght == 1 | args[1].equals("test")) {
+				System.out.println("test case");
+			} else {
+				System.out.println("production " + args[0]);
+			}
+		}
+	}
+	
+	E com a invocação do comando "java Fork live2, qual o resultado?
+	
+	A. test case
+	B. production live2
+	C. test case live2
+	D. Compilação falha
+	E. Uma exceção em tempo de execução é lançada
+	
+Resposta:
+
+4. Dado:
+
+	class Feline {
+		public static void main(String[] args) {
+			long x = 42L;
+			long y = 44L;
+			System.out.print(" " + 7 + 2 + " ");
+			System.out.print(foo() + x + 5 + " ");
+			System.out.print(x + y + foo());
+		}
+		static String foo() { return "foo"; }
+	}
+	
+	Qual é o resultado?
+	
+	A. 9 foo47 86foo
+	B. 9 foo47 4244foo
+	C. 9 foo425 86foo
+	D. 9 foo425 4244foo
+	E. 72 foo47 86foo
+	F. 72 foo47 4244foo
+	G. 72 foo425 86foo
+	H. 72 foo425 4244foo
+	I. Compilação falha
+	
+Resposta:
+
+5. Dado: 
+
+	public class Cowboys {
+		public static void main(String[] args) {
+			int x = 12;
+			int a = 5;
+			int b = 7;
+			System.out.println( x/a + " " + x/b);
+		}
+	}
+	
+	Qual é o resultado ?
+	
+	A. 2 1
+	B. 2 2
+	C. 3 1
+	D. 3 2
+	E. Uma exceção em tempo de execução é lançada
+	
+Resposta:
+
+6. Dado:
+
+	public class SpecialOps {
+		public static void main(String[] args) {
+			String s = "";
+			boolean b1 = true;
+			boolean b2 = false;
+			if ((b2 = false) | (21%5) > 2) s += "x" ;
+			if ((b1 || (b2 == true)) s += "y";
+			if (b2 == true) s += "z";
+			System.out.println(s);
+		}
+	}
+	
+	Quais são verdade? (Escolha todas que se aplicam)
+	
+	A. Compilação falha
+	B. x será incluída na saída
+	C. y será incluída na saída
+	D. z será incluída na saída
+	E. Uma exceção em tempo de execução será lançada
+	
+Resposta:
+	
+7. Dado:
+
+	3.	public class Spock {
+	4.		public static void main(String[] args) {
+	5.			int mask = 0;
+	6.			int count = 0;
+	7.			if ( ((5 < 7) || (++count < 10)) | mask++ < 10 ) mask = mask + 1;
+	8.			if ( (6 > 8) ^ false) mask = mask + 10;
+	9.			if ( !mask > 1) && ++count > 1) mask = mask + 100;
+	10.			System.out.println(mask + " " + count);
+	11.		}
+	12.	}
+	
+	Quais duas são verdade sobre o valor de mask e o valor de count, na linha 10? (Escolha duas)
+	
+	A. mask é 0
+	B. mask é 1
+	C. mask é 2
+	D. mask é 10
+	E. mask é maior que 10
+	F. count é 0
+	G. count é maior que 0
+	
+Resposta:
+
+8. Dado:
+	
+	interface Vessel { }
+	interface Toy { }
+	class Boat implements Vessel { }
+	class Speedboat extends Boat implements Toy { }
+	public class Tree {
+		public static void main(String[] args) {
+			String s = "0";
+			Boat b = new Boat();
+			Boat b2 = new SpeedBoat();
+			SpeedBoat s2 = new SpeedBoat();
+			if ((b instanceof Vessel) && (b2 instanceof Toy)) s += "1";
+			if ((s2 instanceof Vessel) && (s2 instanceof Toy)) s += "2";
+			System.out.println(s);
+		}
+	}
+	
+	Qual é o resultado?
+	
+	A. 0
+	B. 01
+	C. 02
+	D. 012
+	E. Compilação falha
+	F. Uma exceção em tempo de execução é lançada
+	
+Resposta:
+
+
+	
+	
+	
+
+	
+		
