@@ -1,4 +1,4 @@
-1. Dado 
+1. Dado:
 
 	class Hexy {
 		public static void main(String[] args) {
@@ -46,7 +46,7 @@ Resposta:
 	
 Resposta:
 
-3. Dado
+3. Dado:
 
 	class Fork {
 		public static void main(String[] args) {
@@ -192,12 +192,4 @@ Resposta:
 	E. Compilação falha
 	F. Uma exceção em tempo de execução é lançada
 	
-Resposta:
-
-
-	
-	
-	
-
-	
-		
+Resposta:		
