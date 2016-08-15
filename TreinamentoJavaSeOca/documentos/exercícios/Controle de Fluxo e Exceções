@@ -1,0 +1,128 @@
+1. Dado:
+
+	public class Flipper {
+		public static void main(String[] args) {
+			String o = "-";
+			switch ("FRED".toLowerCase().substring(1,3)) {
+				case "yellow":
+					o += "y";
+				case "red":
+					o += "r";
+				case "green":
+					o += "g";
+			}
+		}
+	}
+	
+	Qual é o resultado?
+	
+	A. -
+	B. -r
+	C. -rg
+	D. compilação falha
+	E. Uma exceção em tempo de execução é lançada
+	
+Resposta:
+
+2. Dado:
+	
+	class plane {
+		static String s = "-";
+		public static void main(String[] args) {
+			new Plane().s1();
+			System.out.println(s);
+		}
+		vois s1() {
+			try { s2(); } 
+			catch (Exception e) { s+= "c"; }
+		}
+		void s2() throws Exception {
+			s3(); s+= "2";
+			s3(); s += "2b";
+		}
+		void s3() throws Exception {
+			throw new Exception();
+		}
+	}
+	
+	Qual é o resultado?
+	
+	A. -
+	B. -c
+	C. -c2
+	D. -2c
+	E. -c22b
+	F. -2c2b
+	G. -2c2bc
+	H. Compilação falha
+
+Resposta:
+
+3. Dado:
+	
+	try { int x = Integer.parseInt("two"); }
+	
+	Qual opção abaixo poderia ser usada pra criar um bloco catch apropriado? (Escolha todas que se aplicam)
+	
+	A. ClassCastException
+	B. IllegalStateException
+	C. NumberFormatException
+	D. IllegalArgumentException
+	E. ExceptionInInitializerError
+	F. ArrayIndexOutOfBoundsException
+	
+Resposta:
+
+4. Dado: 
+
+	public class Flip2 {
+		public static void main(String[] args) {
+			String o = "-";
+			String[] sa = new String[4];
+			for(int i = 0; i < args.lenght ; i++)
+				sa[i] = args[i];
+			for (String n : sa) {
+				switch (n.toLowerCase()) {
+					case "yellow" : o += "y";
+					case "red": o += "r";
+					case "green": o += "g";
+				}
+			}
+			System.out.print(o);
+		}
+	}
+	
+	E dado a invocação da linha de comando
+		Java Flip2 RED Green YeLLow
+		
+	Quais são verdade? (Escolha toda que se aplicam)
+	
+	A. A string rgy irá aparecer em algum lugar na saída
+	B. A string rgg irá aparecer em algum lugar na saída
+	C. A string gyr irá aparecer em algum lugar na saída
+	D. Compilação falha
+	E. Uma exceção em tempo de execução é lançada
+	
+Resposta:
+
+5. Dado:
+
+	 class Loopy {
+	 	public static void main(String[] args) {
+	 		int[] x = {7,6,5,4,3,2,1};
+	 		// insert code here
+	 		System.out.print(y + " ");
+	 	}
+	 }
+	 
+	 Quais, inseridas independentemente à linha 4, compilará? (Escolha todas que se aplicam)
+	 
+	 A. for(int y : x) {
+	 B. for(x: int y) }
+	 C. int y = 0; for(y : x) {
+	 D. for(int y = 0, z = 0; z < x.lenght; z++) { y = x[z];
+	 E. for(int y = 0, int z  = 0; z < x.lenght; z++) { y = x[z]; 
+	 F. int y = 0; for(int z = 0; z < x.lenght; z++) { y = x[z];
+	 
+Resposta:
+
