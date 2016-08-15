@@ -1,0 +1,274 @@
+1. Dado:
+
+	public class Mutant {
+		public static void main(String[] args) {
+			StringBuilder sb = new StringBuilder("abs");
+			String s = "abc";
+			sb.reverse().append("d");
+			s.toUpperCase().concat("d");
+			System.out.println("." + sb + ". ." + s + ".");
+		}
+	}
+	
+	Quais duas substrings serão incluídas no resultado? (Escolha duas)
+	
+	A. .abc.
+	B. .ABCd.
+	C. .ABCD.
+	D. .cbad.
+	E. .dcba.
+	
+2. Dado:
+
+	public class Hilltop {
+		public static void main(String[] args) {
+			String[] horses = new String[5];
+			horses[4] = null;
+			for(int i = 0; i < horses.lenght; i++)
+				horses[i] = args[i];
+			System.out.print(horses[i].toUpperCase() + " ");
+		}
+	}
+	
+	E, se o código compila, a linha de comando "java Hilltop eyra vafi draumum kara"
+	
+	Qual é o resultado? 
+	
+	A. EYRA VAFI DRAUMUR KARA
+	B. EYRA VAFI DRAUMUR KARA null
+	C. Uma exceção é lançada sem outra saída
+	D. EYRA VAFI DRAUMUR KARA, e então um NullPointerException
+	E. EYRA VAFI DRAUMUR KARA, e entao um ArrayIndexOutOfBoundsException
+	F. Compilação falha
+	
+Resposta:
+
+3. Dado:
+
+	1.	class Dims {
+	2.		public static void main(String[] args) {
+	3.			int[][] a = {{1,2}, {3,4}};
+	4.			int[] b = (int[]) a[1];
+	5.			Object o1 = a;
+	6.			int[][] a2 = (int[][]) o1;
+	7.			int[] b2 = (int[]) o1;
+	8.			System.out.println(b[1]);
+	9.	}} 
+	
+	Qual é o resultado? (Escolha todas que se aplicam)
+	
+	A. 2
+	B. 4
+	C. Uma exceção é lançada em tempo de execução
+	D. Compilação falha devido erro na linha 4
+	E. Compilação falha devido erro na linha 5
+	F. Compilação falha devido erro na linha 6
+	G. Compilação falha devido erro na linha 7
+	
+Resposta:
+
+5. Dado:
+
+	import java.util.*;
+	public class Sequence {
+		public static void main(String[] args) {
+			ArrayList<String> myList = new ArrayList<String>();
+			myList.add("apple");
+			myList.add("carrot");
+			myList.add("banana");
+			myList.add(1, "plum");
+			System.out.print(myList);
+		}
+	}
+	
+	Qual é oo resultado?
+	
+	A. [apple, banana, carrot, plum]
+	B. [apple, plum, carrot, banana]
+	C. [apple, plum, banana, carrot]
+	D. [plum, banana, carrot, apple]
+	E. [plum, apple, carrot, banana]
+	F. [banana, plum, carrot, apple]
+	G. Compilação falha
+	
+Resposta:
+
+6. Dado:
+
+	3.	class Dozens {
+	4.		int[] dz = {1,2,3,4,5,6,7,8,9,10,11,12};
+	5.	}
+	6.	public class Eggs {
+	7.		public static void main(String[] args) {
+	8.			Dozens[] da = new Dozens[3];
+	9.			da[0] = new Dozens();
+	10.			Dozens d = new Dozens();
+	11.			da[1] = d;
+	12.			d = null;
+	13.			da[1] = null;
+	14.			// do stuff
+	15.		}
+	16.	}
+	
+	Quais duas são verdade sobre os objetos criados dentro de 'main' e quais são elegíveis 
+	para o coletor de lixo quando a linha 14 for atingida?	
+	
+	A. 3 objetos foram criados
+	B. 4 objetos foram criados
+	C. 5 objetos foram criados
+	D. 0 objetos estão elegíveis para GC
+	E. 1 objeto é elegível para GC
+	F. 2 objetos estão elegíveis para GC
+	G. 3 objetos estão elegíveis para GC
+	
+Resposta:
+
+7. Dado:
+
+	public class Tailor {
+		public static void main(String[] args){
+			byte[][] ba = {{1,2,3,4}, {1,2,3}};
+			System.out.println(ba[1].lenght + " " + ba.lenght);
+		}
+	}
+	
+	Qual é o resultado?
+	
+	A. 2 4
+	B. 2 7
+	C. 3 2
+	D. 3 7
+	E. 4 2
+	F. 4 7
+	G. Compilação falha
+	
+8. Dado:
+
+	3.	public class Theory{
+	4.		public static void main(String[] args) {
+	5.			String s1 = "abc";
+	6.			String s2 = s1;
+	7.			s1 += "d";
+	8.			System.out.println(s1 + " " + s2 + " " + (s1 == s2));
+	9.			
+	10.			StringBuilder sb1 = new StringBuilder("abc");
+	11.			StringBuilder sb2 = sb1;
+	12.			sb1.append("d");
+	13.			System.out.println(sb1 + " " + sb2 + " " + (sb1 == sb2));
+	14.		}
+	15.	}
+	
+	Quais são verdade? (Escolha todas que se aplicam)
+	
+	A. Compilação falha
+	B. A primeira linha de saída é abc abc true
+	C. A primeira linha de saída é abc abc false
+	D. A primeira linha de saída é abcd abc false
+	E. A segunda linha de saída é abcd abc false
+	F. A segunda linha de saída é abcd abcd true
+	G. A segunda linha de saíde é abcd abcd false
+	
+Resposta:
+
+9. Dado:
+
+	 public class Mounds {
+	 	public static void main(String[] args){
+	 		StringBuilder sb = new StringBuilder();
+	 		String s = new String();
+	 		for (int i = 0; i < 1000; 1++) {
+	 			s + " " + i;
+	 			sb.append(s);
+	 		}
+	 		// done with loop
+	 	}
+	 }
+	 
+	 Se o coletor de lixo não rodar enquanto o código é executado, aproximadamente quantos objetos 
+	 existirão em memória quando o loop estiver terminado?
+	 
+	 A. Menos que 10
+	 B. Mais ou menos 1000
+	 C. Mais ou menos 2000
+	 D. Mais ou menos 3000
+	 E. Mais ou menos 4000
+	 
+Resposta:
+
+10. Dado:
+
+	class Box {
+		int size;
+		Box(int a) { size = s; };
+	}
+	public class Laser {
+		public static void main(String[] args) {
+			Box b1 = new Box(5);
+			Box[] ba = go(b1, new Box(6));
+			ba[0] = b1;
+			for(Box b: ba) System.out.print(b.size + " ");
+		}
+		static Box[] go(Box b1, Box b2) {
+			b1.size = 4;
+			Box[] ma = {b2, b1};
+			return ma;
+		}
+	}
+	
+	Qual é o resultado?
+	
+	A. 4 4
+	B. 5 4
+	C. 6 4
+	D. 4 5
+	E. 5 5
+	F. Compilação falha
+	
+11. Dado:
+
+	public class Hedges {
+		public static void main(String[] args) {
+			String s = "JAVA";
+			s = ' + "rocks";
+			s = s.substring(4,8);
+			s.toUpperCase();
+			System.out.println(s);
+		}
+	}
+	
+	Qual é o resultado?
+	
+	A. JAVA
+	B. JAVAROCKS
+	C. rocks
+	D. rock
+	E. ROCKS
+	F. ROCK
+	G. Compilação falha
+	
+Resposta:
+
+12. Dado:
+
+	1.	import java.util.*;
+	2.	class Fortress {
+	3.		private String name;
+	4.		private ArrayList<Integer> list;
+	5.		Fortress() { list = new ArrayList<Integer>(); }
+	6.		
+	7.		String getName() { return name; }
+	8.		void addToList(int x) { list.add(x); }
+	9.		ArrayList getList() {  return list; }
+	10.	}
+	
+	Quais linhas de código (se alguma) quebra o encapsulamento? (Escolha todas que se aplicam)
+	
+	A. Linha 3
+	B. Linha 4
+	C. Linha 5
+	D. Linha 7
+	E. Linha 8
+	F. Linha 9
+	G. A classe está bem encapsulada
+	
+Resposta:
