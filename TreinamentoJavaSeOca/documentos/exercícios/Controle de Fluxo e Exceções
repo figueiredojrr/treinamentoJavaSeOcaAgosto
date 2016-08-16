@@ -294,6 +294,123 @@ Resposta:
 	
 Resposta:
 
+12. Dado:
+
+	public class Gotcha {
+		public static void main(String[] args) {
+			// insert code here
+		}
+		void go() {
+			go();
+		}
+	}
 	
+	E dado os seguintes três fragmentos de código:
 	
+	I. 		new Gotcha().go();
+	II. 	try { new Gotcha().go(); }
+			catch(Error e) { System.out.println("ouch"; }
+	III.	try {new Gotcha().go; }
+			catch( Exception e) { System.out.println("ouch"); }
 	
+	Quando os fragmentos I-III são adicionados, independentemente, na linha 5, quais são verdade?
+	(Escolha todas que se aplicam)
+	
+	A. Alguns não irão compilar
+	B. Eles irão todas compilar
+	C. Todos irão completar normalmente
+	D. Nenhuma irá completar normalmente
+	E. Somente uma irá completar normalmente
+	F. Duas deles irão completar normalmente
+	
+Resposta:
+
+13. Dado o pedaço de código:
+
+	String s = "bob";
+	String[] sa = {"a", "bob"};
+	final String s2 = "bob";
+	StringBuilder sb = new StringBuilder("bob");
+	
+	// switch(sa[1]) {			// linha 1
+	// switch("b" + "ob") { 	// linha 2
+	// switch(sb.toString()) }	// linha 3
+	
+	// case "ann": ;			// linha 4
+	// case s: ;				// linha 5
+	// case s2: ;				// linha 6
+	}
+
+	E dado que as linhas numeradas irão todas ser testadas descomentando-se uma das cláusulas switch
+	e uma cláusula case juntas, quais linhas irão FALHAR ao compilar? (Escolha todas que se aplicam)
+	
+	A. linha 1
+	B. linha 2
+	C. linha 3
+	D. linha 4
+	E. linha 5
+	F. linha 6
+	G. Todas as seis linhas de código compilarão
+	
+Resposta:
+
+14. Dado:
+
+	public class Frisbee {
+		// insert code here
+		int x = 0;
+		System.out.println(7/x);
+	    }
+	}
+	E dados os seguintes quatro fragmentos de código:
+	
+	I. 		public static void main(String[] args) {
+	II.		public static void main(String[] args) throws Exception {
+	III.	public static void main(String[] args) throws IOException {
+	IV.		public static void main(String[] args) throws RuntimeException {
+	
+	Se os quatro fragmentos são inseridos independentemente na linha 2, quais são verdade? 
+	(Escolha todas que se aplicam)
+	
+	A. Todas as quatro compilarão e executarão sem exceções
+	B. Todas as quatro compilarão e executarão e lançarão uma exceção
+	C. Algumas, mas não todas, irão compilar e executar sem exceção
+	D. Algumas, mas não todas, irão compilar e lançar uma exceção
+	E. Quando considerando os fragmentos II, III e IV, daqueles que irão compilar, adicionando um 
+		bloco try/catch em volta da linha 4 irá falhar a compilação
+		
+Resposta:
+
+15. Dado: 
+
+	class MyException extends Exception { }
+	class Tire {
+		void doStuff() { }
+	}
+	public class Retread extends Tire {
+		public static void main(String[] args) {
+			new Retread().doStuff();
+		}
+		// insert code here
+		System.out.println(7/0);
+		}
+	}
+	
+	E dado os seguintes quatro fragmentos de código:
+	
+	I.		void doStuff() {
+	II. 	void doStuff() throws MyException {
+	III.	void doStuff throws RuntimeException {
+	IV.		void doStuff throws ArithmeticException {
+	
+	Quando fragmentos I-IV são adicionados, independentemente, na linha 10, quais são verdade?
+	(Escolha todas que se aplicam)
+	
+	A. Nenhum compilará
+	B. Eles irão todos compilar
+	C. Alguns, mas não todos, irão compilar
+	D. Todas aqueles irão compilar irão também lançar uma exceção em tempo de execução
+	E. Nenhum daqueles que compilarão irão lançar uma exceção em tempo de execução
+	F. Somente alguns daqueles que compilarão, lançarão uma exceção em tempo de execução
+	
+Resposta:	
